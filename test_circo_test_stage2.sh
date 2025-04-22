@@ -1,7 +1,8 @@
 
 
 path=''
-
+model=''
+dataset_root=''
 type='dress'
 seed=101
 lora_rank=128
@@ -20,7 +21,7 @@ do
         --epoch $epoch \
         --lora_rank ${lora_rank} \
         --seed $seed \
-        --model '/mnt_rela/wangyabing.wyb/ckpt/clip/ViT-L-14.pt' \
-        --dataset-root '/mnt_rela/wangyabing.wyb/datasets/CRICO' \
+        --model ${model} \
+        --dataset-root ${dataset_root} \
         --output-acc-log "${path}/circo_acc.txt"
 done

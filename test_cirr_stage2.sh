@@ -5,6 +5,8 @@ path=''
 type='dress'
 seed=101
 lora_rank=128
+model=''
+dataset_root=''
 
 for epoch in {1..30}
 do
@@ -20,7 +22,7 @@ do
         --lora_rank ${lora_rank} \
         --epoch $epoch \
         --seed $seed \
-        --model '/mnt_rela/wangyabing.wyb/ckpt/clip/ViT-L-14.pt' \
-        --dataset-root '/mnt_rela/wangyabing.wyb/datasets/CIRR/CIRR-cirr_dataset' \
+        --model ${model} \
+        --dataset-root {dataset_root} \
         --output-acc-log "${path}/cirr_acc"
 done

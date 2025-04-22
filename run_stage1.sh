@@ -24,5 +24,5 @@ python -u src/main.py \
     --adapter_dim=${adapter_dim} \
     --loss_ref_txt=${loss_ref_txt} \
     --dist-url="tcp://127.0.0.1:3201" \
-    --model '/mnt_rela/wangyabing.wyb/ckpt/clip/ViT-L-14.pt' \
-    --logs "/mllm_native/wangyabing.wyb/output/CIR/Adapter/CLIP_B_seed_${seed}_cls_consistency_${consistency}_loss_ref_txt_${loss_ref_txt}_weak_29w_temperature_${temperature}"
+    --model ${model_path} \
+    --logs "logs/"

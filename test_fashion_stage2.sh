@@ -5,8 +5,10 @@ path=$checkpoints
 type='shirt'
 seed=101
 lora_rank=128
+model=''
+dataset_root=''
 
-for type in 'dress' 
+for type in 'dress' 'shirt' 'toptee'
 do
     for epoch in {1..30}
     do
@@ -21,8 +23,8 @@ do
             --stage 2 \
             --lora_rank ${lora_rank} \
             --seed ${seed} \
-            --model '/mnt_rela/wangyabing.wyb/ckpt/clip/ViT-L-14.pt' \
-            --dataset-root '/mnt_rela/wangyabing.wyb/datasets/Fashion-IQ' \
+            --model ${model} \
+            --dataset-root {dataset_root} \
             --output-acc-log "${path}/${type}_acc.txt"
     done
 done
